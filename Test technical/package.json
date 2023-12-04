@@ -1,0 +1,22 @@
+{
+  "name": "test-technical",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:run": "cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "cypress": {
+    "testFiles": "cypress/e2e/*.js"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "mochawesome": "^7.1.3"
+  }
+  
+}
+  
+

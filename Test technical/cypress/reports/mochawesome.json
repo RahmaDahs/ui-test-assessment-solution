@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-04T14:41:12.380Z",
+    "end": "2023-12-04T14:41:16.749Z",
+    "duration": 4369,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8b237c3f-e759-4bd0-9fa1-52c0c126fd6f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "94322de1-7b7e-470e-a9d1-25fbb5a38e9d",
+          "title": "Login Test - Valid Credentials-invalid credentials",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should log in with valid credentials",
+              "fullTitle": "Login Test - Valid Credentials-invalid credentials should log in with valid credentials",
+              "timedOut": null,
+              "duration": 1058,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Enter valid username and password\ncy.get('input[placeholder=\"username\"]').type('rdahs');\ncy.get('input[placeholder=\"password\"]').type('password');\ncy.get('input[value=\"Sign in\"]').click();\n// Verify user is logged in and redirected to the home page\n// cy.url().should('eq', 'http://localhost:8080/city.html');\ncy.get('#btn').should('contain', 'View selected data');",
+              "err": {},
+              "uuid": "f77a46fe-dbab-464c-82aa-702580e2945c",
+              "parentUUID": "94322de1-7b7e-470e-a9d1-25fbb5a38e9d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should log in with invalid credentials",
+              "fullTitle": "Login Test - Valid Credentials-invalid credentials should log in with invalid credentials",
+              "timedOut": null,
+              "duration": 906,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Enter valid username and password\ncy.get('input[placeholder=\"username\"]').type('unknown');\ncy.get('input[placeholder=\"password\"]').type('unknown');\ncy.get('input[value=\"Sign in\"]').click();\n// Verify the text of error message",
+              "err": {},
+              "uuid": "3fa9b401-a9d9-48d0-8cb1-3a0c43103289",
+              "parentUUID": "94322de1-7b7e-470e-a9d1-25fbb5a38e9d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f77a46fe-dbab-464c-82aa-702580e2945c",
+            "3fa9b401-a9d9-48d0-8cb1-3a0c43103289"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1964,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
